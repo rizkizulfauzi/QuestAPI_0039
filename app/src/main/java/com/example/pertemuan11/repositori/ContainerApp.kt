@@ -42,3 +42,11 @@ class DefaultContainerApp : ContainerApp{
     override val repositoryDataSiswa: RepositoryDataSiswa by lazy {
         JaringanRepositoryDataSiswa(retrofitService) }
 }
+
+class AplikasiDataSiswa : Application() {
+    lateinit var container : ContainerApp
+    override fun onCreate() {
+        super.onCreate()
+        this.container = DefaultContainerApp()
+    }
+}
