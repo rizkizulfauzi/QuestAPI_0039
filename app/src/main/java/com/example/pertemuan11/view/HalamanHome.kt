@@ -136,7 +136,7 @@ fun DaftarSiswa(
 
     modifier: Modifier=Modifier
 ){
-    LazyColumn (modifier = Modifier){
+    LazyColumn (modifier = modifier){
         items(items = itemSiswa, key = {it.id}){
                 person ->
             ItemSiswa(
